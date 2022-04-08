@@ -1,6 +1,6 @@
 .barraLateralContainer {
-	background-color: var(--corBackgroundTerciaria);
-	color: var(--corFonteTerciaria);
+	background-color: var(--corBackground3);
+	color: var(--corFonte3);
 	display: flex;
 	justify-content: flex-start;
 	align-items: flex-start;
@@ -23,7 +23,7 @@
 			padding: 10px 70px 10px 10px;
 
 			&:hover {
-				background-color: var(--corBackgroundPrimaria);
+				background-color: var(--corBackground1);
 				a {
 					color: black;
 				}
@@ -32,7 +32,7 @@
 	}
 
 	a {
-		color: var(--corFonteTerciaria);
+		color: var(--corFonte3);
 		width: 100%;
 	}
 }

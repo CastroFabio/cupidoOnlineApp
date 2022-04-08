@@ -9,14 +9,17 @@ const CampoDePesquisa = () => {
 			<form className='campoDePesquisaContainer' action='#'>
 				<div className='campoDePesquisaBotaoContainer'>
 					<button className='campoDePesquisaBotao' type='submit'>
-						<FontAwesomeIcon icon={faSearch}></FontAwesomeIcon>
+						<FontAwesomeIcon
+							className='campoDePesquisaIcone'
+							icon={faSearch}
+						></FontAwesomeIcon>
 					</button>
 				</div>
 				<input
 					className='campoDePesquisa'
 					type='text'
-					placeholder='Search...'
-					name='search'
+					placeholder='Busque por contatos ou assuntos...'
+					name='pesquisar'
 				/>
 			</form>
 		</div>

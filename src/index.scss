@@ -1,23 +1,29 @@
 :root {
-	--corBackgroundPrimaria: rgb(242, 202, 204);
-	--corBackgroundSecundaria: rgb(244, 232, 229);
-	--corBackgroundTerciaria: rgb(229, 42, 80);
+	--corBackground1: rgb(242, 202, 204);
+	--corBackground2: rgb(244, 232, 229);
+	--corBackground3: rgb(229, 42, 80);
+	--corBackground4: rgb(249, 249, 249);
 
-	--corFontePrimaria: rgb(238, 103, 131);
-	--corFonteSecundaria: rgb(239, 142, 155);
-	--corFonteTerciaria: rgb(255, 255, 255);
+	--corFonte1: rgb(238, 103, 131);
+	--corFonte2: rgb(239, 142, 155);
+	--corFonte3: rgb(255, 255, 255);
 
 	--tamanhoFotoDePerfil: 80px;
+
+	--tipoDaFonte: "Open Sans Condensed", sans-serif;
+
+	--squish-animation-time: 500ms;
+	--progress-animtion-time: 1000ms;
 }
 
 body {
 	margin: 0;
 	padding: 0 40px;
-	font-family: "Open Sans Condensed", sans-serif;
+	font-family: var(--tipoDaFonte);
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
-	color: var(--corFontePrimaria);
-	background-color: var(--corBackgroundPrimaria);
+	color: var(--corFonte1);
+	background-color: var(--corBackground1);
 }
 
 code {
@@ -26,7 +32,7 @@ code {
 }
 
 a {
-	color: var(--corFontePrimaria);
+	color: var(--corFonte1);
 	text-decoration: none;
 }
 

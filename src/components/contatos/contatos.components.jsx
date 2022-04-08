@@ -38,7 +38,7 @@ const pessoas = [
 		dataUltimaMessagemEnviada: "13 de Maio",
 		fotoPerfilUrl: "https://randomuser.me/api/portraits/women/66.jpg",
 	},
-	{
+	/* 	{
 		id: 6,
 		name: "pessoa #6",
 		assunto: "assunto do email",
@@ -58,7 +58,7 @@ const pessoas = [
 		assunto: "assunto do email",
 		dataUltimaMessagemEnviada: "13 de Maio",
 		fotoPerfilUrl: "https://randomuser.me/api/portraits/women/66.jpg",
-	},
+	}, */
 ]
 
 const Contatos = () => {
