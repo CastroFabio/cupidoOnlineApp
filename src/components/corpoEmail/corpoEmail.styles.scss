@@ -1,0 +1,26 @@
+.corpoEmail__mainContainer {
+	display: grid;
+	grid-template-rows: 3fr 1fr;
+
+	.corpoEmail__container {
+		padding: 50px;
+		background-color: rgb(249, 249, 249);
+		margin: 50px 0 10px 50px;
+		box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+
+		.corpoEmail__cabecalho {
+			display: grid;
+			grid-template-columns: 3fr 1fr;
+		}
+	}
+	.corpoEmail__caixaDeTextoContainer {
+		padding: 50px;
+		background-color: rgb(249, 249, 249);
+		margin: 10px 0px 50px 50px;
+		box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+	}
+	textarea {
+		resize: none;
+		overflow: auto;
+	}
+}

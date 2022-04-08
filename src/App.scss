@@ -1,0 +1,38 @@
+.border {
+	border: black 1px solid;
+}
+
+.mainPage__container {
+	margin: 100px 25px;
+	box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+	border-radius: 10px;
+	display: grid;
+	grid-template-columns: 1fr 8fr;
+	background-color: var(--corBackgroundSecundaria);
+
+	.mainPage__sidebar {
+		border-radius: 0 10px 10px 0;
+	}
+
+	.mainPage__mainContainer {
+		display: grid;
+		grid-template-rows: 1fr 15fr;
+	}
+	.mainPage__topBar {
+		display: flex;
+		box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px;
+	}
+	.mainPage__bodyContainer {
+		display: flex;
+	}
+
+	.mainPage__topBar {
+		display: grid;
+		grid-template-columns: 12fr 2fr;
+	}
+
+	.mainPage__bodyContainer {
+		display: grid;
+		grid-template-columns: 4fr 2fr;
+	}
+}

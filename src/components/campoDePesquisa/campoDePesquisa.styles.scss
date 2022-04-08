@@ -1,0 +1,39 @@
+.campoDePesquisaContainer {
+	padding: 2em 0 0 5em;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	align-content: center;
+	justify-content: flex-start;
+	align-items: center;
+}
+
+.campoDePesquisa {
+	padding: 6px;
+	margin-top: 8px;
+	font-size: 17px;
+	border: none;
+	height: 40px;
+	border-radius: 10px;
+	background-color: transparent;
+
+	&:hover {
+		transition: 200ms ease-in-out;
+	}
+	&:focus {
+		border: 1px solid var(--corBackgroundPrimaria);
+	}
+}
+
+.campoDePesquisaBotao {
+	padding: 6px 5px;
+	margin-top: 8px;
+	background: white;
+	font-size: 17px;
+	border: none;
+	background-color: transparent;
+	cursor: pointer;
+
+	&:hover {
+	}
+}

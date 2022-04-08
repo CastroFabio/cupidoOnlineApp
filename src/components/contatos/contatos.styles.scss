@@ -1,0 +1,42 @@
+.contatos__mainContainer {
+	margin: 40px 30px;
+}
+
+.contatos__container {
+	display: grid;
+	grid-template-columns: 1fr 4fr 2fr;
+	padding: 10px;
+	margin-top: 5px;
+	transition: 400ms ease-in;
+	border-radius: 10px;
+	width: 100%;
+
+	&:hover {
+		cursor: pointer;
+		box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	}
+	.contatos__containerFotoPerfil {
+		display: flex;
+		align-items: center;
+		flex-direction: row;
+		flex-wrap: wrap;
+		align-content: center;
+		justify-content: center;
+	}
+	.contatos__fotoDePerfil {
+		border-radius: 200px;
+		width: var(--tamanhoFotoDePerfil);
+		height: var(--tamanhoFotoDePerfil);
+	}
+	.contatos__infoContainer {
+		padding: 0 5px 0 10px;
+	}
+	.contatos__dataContainer {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: flex-end;
+		align-items: flex-start;
+		align-content: flex-start;
+	}
+}

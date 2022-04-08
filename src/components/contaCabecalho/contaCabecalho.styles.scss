@@ -1,0 +1,18 @@
+:root {
+	--fotoDePerfilCabecalho: 70px;
+}
+.cabecalhoContaContainer {
+	padding: 20px 5px;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	align-content: center;
+	justify-content: space-evenly;
+	align-items: center;
+
+	.fotoDePerfil {
+		height: var(--fotoDePerfilCabecalho);
+		width: var(--fotoDePerfilCabecalho);
+		border-radius: 200px;
+	}
+}

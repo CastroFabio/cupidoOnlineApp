@@ -1,0 +1,38 @@
+.barraLateralContainer {
+	background-color: var(--corBackgroundTerciaria);
+	color: var(--corFonteTerciaria);
+	display: flex;
+	justify-content: flex-start;
+	align-items: flex-start;
+	justify-items: start;
+	align-content: flex-start;
+	flex-direction: column;
+	flex-wrap: wrap;
+	border-radius: 10px 0 0 10px;
+	padding: 40px 40px 0 0;
+
+	.logoBarraLateral {
+		padding-left: 40px;
+	}
+	.navBarraLateral {
+		list-style-type: none;
+		width: 100%;
+		margin-top: 50px;
+
+		li {
+			padding: 10px 70px 10px 10px;
+
+			&:hover {
+				background-color: var(--corBackgroundPrimaria);
+				a {
+					color: black;
+				}
+			}
+		}
+	}
+
+	a {
+		color: var(--corFonteTerciaria);
+		width: 100%;
+	}
+}

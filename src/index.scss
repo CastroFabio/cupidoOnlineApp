@@ -1,0 +1,35 @@
+:root {
+	--corBackgroundPrimaria: rgb(242, 202, 204);
+	--corBackgroundSecundaria: rgb(244, 232, 229);
+	--corBackgroundTerciaria: rgb(229, 42, 80);
+
+	--corFontePrimaria: rgb(238, 103, 131);
+	--corFonteSecundaria: rgb(239, 142, 155);
+	--corFonteTerciaria: rgb(255, 255, 255);
+
+	--tamanhoFotoDePerfil: 80px;
+}
+
+body {
+	margin: 0;
+	padding: 0 40px;
+	font-family: "Open Sans Condensed", sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	color: var(--corFontePrimaria);
+	background-color: var(--corBackgroundPrimaria);
+}
+
+code {
+	font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+		monospace;
+}
+
+a {
+	color: var(--corFontePrimaria);
+	text-decoration: none;
+}
+
+* {
+	box-sizing: border-box;
+}
