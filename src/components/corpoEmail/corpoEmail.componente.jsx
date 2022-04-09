@@ -11,7 +11,7 @@ const emails = [
 		assunto: "assunto",
 		dataDeEnvio: "15 de Fevereiro de 2022",
 		conteudoDoEmail:
-			"Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe sit placeat quo sequi temporibus consectetur ut officiis. Magnam facere vel quam modi dolor, illo totam eum corporis molestiae? Ad, corrupti.",
+			"Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe sit placeat quo sequi temporibus consectetur ut officiis. Magnam facere vel quam modi dolor, illo totam eum corporis molestiae? Ad, corrupti.",
 	},
 	{
 		id: 2,
@@ -101,7 +101,7 @@ const CorpoEmail = () => {
 					</div>
 
 					<div className='corpoEmail__dataDeEnvio'>{dataDeEnvio}</div>
-					<FontAwesomeIcon icon={faReply}></FontAwesomeIcon>
+					{/* <FontAwesomeIcon icon={faReply}></FontAwesomeIcon> */}
 				</div>
 				<div className='corpoEmail__conteudo'>{conteudoDoEmail}</div>
 			</div>
@@ -113,7 +113,6 @@ const CorpoEmail = () => {
 					rows='5'
 					className='corpoEmail__caixaDeTexto'
 				></textarea>
-
 				<button className='corpoEmail__Botao' type='submit'>
 					Atire sua Flecha
 				</button>
