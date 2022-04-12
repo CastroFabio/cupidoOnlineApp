@@ -53,10 +53,6 @@
 	z-index: 0;
 }
 
-::placeholder {
-	color: transparent;
-}
-
 .submitBtn {
 	display: block;
 	margin-left: auto;
@@ -79,6 +75,10 @@
 }
 
 .input {
+	&::placeholder {
+		color: transparent;
+	}
+
 	&:focus + .label {
 		top: -7px;
 		left: 3px;

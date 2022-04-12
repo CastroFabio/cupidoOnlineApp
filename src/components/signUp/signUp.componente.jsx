@@ -1,12 +1,12 @@
 import React from "react"
-import "./registroConta.styles.scss"
+import "./signUp.styles.scss"
 
-const RegistroConta = () => {
+const SignUp = () => {
 	return (
 		<div className='signupFrm'>
 			<div className='wrapper'>
 				<form action='' className='form'>
-					<h1 className='title'>Registre-se</h1>
+					<h1 className='title'>Crie sua conta</h1>
 
 					<div className='inputContainer'>
 						<input type='text' className='input' placeholder='a' />
@@ -35,11 +35,12 @@ const RegistroConta = () => {
 							Confirmar Senha
 						</label>
 					</div>
-					<input type='submit' className='submitBtn' value='Sign up' />
+
+					<input type='submit' className='submitBtn' value='Registrar' />
 				</form>
 			</div>
 		</div>
 	)
 }
 
-export default RegistroConta
+export default SignUp

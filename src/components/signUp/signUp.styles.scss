@@ -39,6 +39,10 @@
 	outline: none;
 	background: none;
 	z-index: 1;
+
+	&::placeholder {
+		color: transparent;
+	}
 }
 
 .label {
@@ -51,10 +55,6 @@
 	font-size: 16px;
 	transition: 0.5s;
 	z-index: 0;
-}
-
-::placeholder {
-	color: transparent;
 }
 
 .submitBtn {

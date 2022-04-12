@@ -6,12 +6,6 @@
 	grid-template-columns: 1fr 8fr;
 	background-color: var(--corBackground2);
 
-	.mainPage__cabecalhoContainer {
-		box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px;
-		display: grid;
-		grid-template-columns: 12fr 2fr;
-	}
-
 	.mainPage__corpoEmailContatosContainer {
 		display: grid;
 		grid-template-columns: 2fr 1fr;

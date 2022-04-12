@@ -1,7 +1,5 @@
-import React, { useEffect, useRef, useState } from "react"
+import React, { useState } from "react"
 import "./corpoEmail.styles.scss"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faReply } from "@fortawesome/free-solid-svg-icons"
 
 const emails = [
 	{
@@ -82,13 +80,11 @@ const CorpoEmail = () => {
 	const { id, remetente, destinatario, assunto, dataDeEnvio, conteudoDoEmail } =
 		emails[0]
 
-	/* 	const [toggle, setToggle] = useState(true)
+	const [toggle, setToggle] = useState(true)
 
-	const renderCount = useRef(0)
-
-	useEffect(() => {
-		setToggle(toggle)
-	}) */
+	const clickHandler = () => {
+		setToggle(!toggle)
+	}
 
 	return (
 		<div className='corpoEmail__mainContainer'>
@@ -117,6 +113,13 @@ const CorpoEmail = () => {
 					Atire sua Flecha
 				</button>
 			</form>
+			{/* <button
+				onClick={clickHandler}
+				className={toggle ? "corpoEmail__Botao" : "corpoEmail__Botao animating"}
+				type='submit'
+			>
+				Atire sua Flecha
+			</button> */}
 		</div>
 	)
 }
