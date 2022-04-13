@@ -1,4 +1,4 @@
-service: serverlesCupidoOnlineApp
+service: serverlessCupidoOnlineApp
 
 frameworkVersion: "3"
 
@@ -10,23 +10,63 @@ provider:
   region: sa-east-1
   environment:
     FILE_UPLOAD_BUCKET_NAME: ${self:custom.fileBucketName}
+    DYNAMODB_POSTS_TABLE_NAME: ${self:custom.postsTableName}
+  iamRoleStatements:
+    - Effect: Allow
+      Action:
+        - dynamodb:*
+      Resource: "*"
 
 plugins:
   - serverless-s3-sync
+  - serverless-webpack
 
+package:
+  individually: true
 custom:
   appName: serverless-cupido-online-app
+  postsTableName: posts-table-${self:custom.appName}-${self:provider.stage}
   fileBucketName: s3-file-bucket-${self:custom.appName}-${self:provider.stage}
   s3Sync:
     - bucketName: ${self:custom.fileBucketName}-demo
       localDir: uploadData
 
 functions:
-  hello:
-    handler: handler.hello
+  getUser:
+    handler: lambdas/endpoints/getUser.handler
+    events:
+      - http:
+          path: get-user/{ID}
+          method: GET
+          cors: true
+  getPost:
+    handler: lambdas/endpoints/getPost.handler
+    events:
+      - http:
+          path: get-post/{ID}
+          method: GET
+          cors: true
+  createPost:
+    handler: lambdas/endpoints/createPost.handler
+    events:
+      - http:
+          path: create-post/{ID}
+          method: POST
+          cors: true
 
 resources:
   Resources:
+    MyDynamoDbTable:
+      Type: AWS::DynamoDB::Table
+      Properties:
+        TableName: ${self:custom.postsTableName}
+        AttributeDefinitions:
+          - AttributeName: ID
+            AttributeType: S
+        KeySchema:
+          - AttributeName: ID
+            KeyType: HASH
+        BillingMode: PAY_PER_REQUEST
     DemoBucketUpload:
       Type: AWS::S3::Bucket
       Properties:
