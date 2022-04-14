@@ -15,7 +15,31 @@ provider:
     - Effect: Allow
       Action:
         - dynamodb:*
+        - ses:*
       Resource: "*"
+  apiGateway:
+    apiKeys:
+      - free:
+          - myFreeKey
+          - ${self:provider.stage}-myFreeKey
+      - paid:
+          - myPaidKey
+          - ${self:provider.stage}-myPaidKey
+    usagePlan:
+      - free:
+          quota:
+            limit: 1000
+            period: MONTH
+          throttle:
+            burstLimit: 5
+            rateLimit: 20
+      - paid:
+          quota:
+            limit: 10000
+            period: MONTH
+          throttle:
+            burstLimit: 50
+            rateLimit: 200
 
 plugins:
   - serverless-s3-sync
@@ -23,6 +47,7 @@ plugins:
 
 package:
   individually: true
+
 custom:
   appName: serverless-cupido-online-app
   postsTableName: posts-table-${self:custom.appName}-${self:provider.stage}
@@ -39,6 +64,23 @@ functions:
           path: get-user/{ID}
           method: GET
           cors: true
+          private: true
+  createPost:
+    handler: lambdas/endpoints/createPost.handler
+    events:
+      - http:
+          path: create-post/{ID}
+          method: POST
+          cors: true
+          private: true
+  updatePost:
+    handler: lambdas/endpoints/updatePost.handler
+    events:
+      - http:
+          path: update-post/{ID}
+          method: PUT
+          cors: true
+          private: true
   getPost:
     handler: lambdas/endpoints/getPost.handler
     events:
@@ -46,11 +88,12 @@ functions:
           path: get-post/{ID}
           method: GET
           cors: true
-  createPost:
-    handler: lambdas/endpoints/createPost.handler
+          private: true
+  sendEmail:
+    handler: lambdas/endpoints/sendEmail.handler
     events:
       - http:
-          path: create-post/{ID}
+          path: send-email
           method: POST
           cors: true
 

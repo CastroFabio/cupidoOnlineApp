@@ -6,7 +6,6 @@ const yup = require("yup")
 const tableName = process.env.DYNAMODB_POSTS_TABLE_NAME
 
 const bodySchema = yup.object().shape({
-	name: yup.string().required(),
 	text: yup.string().required(),
 })
 
@@ -16,15 +15,17 @@ const pathSchema = yup.object().shape({
 
 const handler = async (event) => {
 	let ID = event.pathParameters.ID
-	const user = event.body
-	user.ID = ID
+	const { text } = event.body
 
-	const newUser = await Dynamo.write(user, tableName)
+	const res = await Dynamo.update({
+		tableName,
+		primaryKey: "ID",
+		primaryKeyValue: ID,
+		updateKey: "text",
+		updateValue: text,
+	})
 
-	if (!newUser) {
-		return Responses._400({ message: "Failed to write user by ID" })
-	}
-	return Responses._200({ newUser })
+	return Responses._200({})
 }
 
 exports.handler = hooksWithValidation({ bodySchema, pathSchema })(handler)
